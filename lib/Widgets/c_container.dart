@@ -3,6 +3,7 @@ import 'package:flutter_compiladores_semana7/Utility/default_classes.dart';
 import 'package:flutter_compiladores_semana7/Widgets/c_text.dart';
 
 class BasicContainer extends StatelessWidget {
+  // Definimos las propiedades de la clase
   final Widget child;
   final int flexValue;
   final Color containerColor;
@@ -12,6 +13,7 @@ class BasicContainer extends StatelessWidget {
   final bool includeStatus;
   final DefaultClasses thisClass;
 
+  // Constructor de la clase
   BasicContainer({
     Key? key,
     this.child = const SizedBox(),
