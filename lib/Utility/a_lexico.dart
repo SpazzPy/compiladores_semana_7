@@ -11,7 +11,6 @@ Map<String, dynamic> aLexico(String content) {
   content = content.replaceAll(RegExp(r'\s*,\s*'), ',');
   Map<String, RegExp> varRules = aLexicRulesVariables;
   Map<String, RegExp> valuesRules = aLexicRulesValues;
-
   String result = '';
   bool captureVar = false;
   bool captureValues = false;
@@ -36,6 +35,14 @@ Map<String, dynamic> aLexico(String content) {
           }
           captureValues = true;
           break;
+        }
+
+        if (svgColorNames.contains(cnt)) {
+          if (svgColorNames.contains(cnt)) {
+            result += '$string_ $cnt\n';
+            captureValues = true;
+            break;
+          }
         }
       }
     }

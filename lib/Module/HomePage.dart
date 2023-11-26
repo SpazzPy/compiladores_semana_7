@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_compiladores_semana7/Utility/a_intermedio.dart';
 import 'package:flutter_compiladores_semana7/Utility/a_lexico.dart';
 import 'package:flutter_compiladores_semana7/Utility/a_sintactico.dart';
+import 'package:flutter_compiladores_semana7/Utility/a_tabla_simbolo.dart';
 import 'package:flutter_compiladores_semana7/Utility/default_classes.dart';
 import 'package:flutter_compiladores_semana7/Utility/response.dart';
 import 'package:flutter_compiladores_semana7/Widgets/c_container.dart';
@@ -44,9 +47,19 @@ class HomePage extends State<Home> {
           parsing.status = parsingResult[successKey];
           parsing.statusMessage = parsingResult[errorKey];
           parsing.controller.text = parsingResult[resultKey];
-          // parsing.controller.text = parsingResult;
-          // symbolTable.controller.text = symbolTableResult;
-          // intermediateCode.controller.text = intermediateCodeResult;
+          parsing.objects = parsingResult[objectKey];
+
+          symbolTable.objects = parsingResult[objectKey];
+          Map<String, dynamic> symbolTableResult = tablaSimbolo(parsingResult[objectKey]);
+          symbolTable.status = symbolTableResult[successKey];
+          symbolTable.statusMessage = symbolTableResult[errorKey];
+          symbolTable.controller.text = symbolTableResult[resultKey];
+          symbolTable.table = symbolTableResult[tableKey];
+
+          Map<String, dynamic> codigoIntermedioResult = codigoIntermedio(parsingResult[objectKey]);
+          intermediateCode.status = codigoIntermedioResult[successKey];
+          intermediateCode.statusMessage = codigoIntermedioResult[errorKey];
+          intermediateCode.controller.text = codigoIntermedioResult[resultKey];
         });
       });
     }
@@ -86,9 +99,18 @@ class HomePage extends State<Home> {
                 ),
                 BasicContainer(
                   flexValue: 1,
-                  title: "Analizador Léxico",
-                  child: CTextFieldOutput(
-                    textController: lexic.controller,
+                  title: "Visualizador",
+                  includeStatus: false,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: intermediateCode.controller.text.isNotEmpty
+                          ? SvgPicture.string(
+                              intermediateCode.controller.text,
+                            )
+                          : const Text(""),
+                    ),
                   ),
                 ),
               ],
@@ -118,8 +140,8 @@ class HomePage extends State<Home> {
                 BasicContainer(
                   title: "Tabla de Símbolos",
                   thisClass: symbolTable,
-                  child: CTextFieldOutput(
-                    textController: symbolTable.controller,
+                  child: SingleChildScrollView(
+                    child: symbolTable.table,
                   ),
                 ),
                 BasicContainer(

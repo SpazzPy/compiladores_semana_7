@@ -12,6 +12,8 @@ class DefaultClasses {
   String statusMessage;
   bool status;
   TextEditingController controller;
+  List objects = [];
+  Table table = Table();
 
   DefaultClasses({
     this.statusMessage = "Default Success Message",
