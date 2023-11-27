@@ -49,4 +49,13 @@ Hay una serie de variables con parametros, las cuales pueden ser obviadas y se l
 ### Resultado:
 ![image](https://github.com/SpazzPy/compiladores_semana_7/assets/91347861/451365b5-62cf-4545-9fc2-80563fd9b3d4)
 
+### Código utilizado en el ejemplo
+```
+paper 300 300 cyan
+rect 10 10 50 50 grey
+circle 290 10 60 green
+ellipse 10 290 120 30 red
+line 150 150 300 300 10 black
+```
+
 
