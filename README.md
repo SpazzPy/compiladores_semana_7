@@ -8,7 +8,8 @@ Matrícula: **1-16-0408**
 Este pequeño compilador es una herramienta que facilita la visualizacion de algunas de las fases de un compilador y generando un código intermedio en SVG a partir de un codigo fuente que fue creado por el mismo desarrollador. 
 
 ## Como lo ejecuto?
-Se pueden descargar el archivo llamado [Frannie Fermin 1-16-0408 Ejecutable.zip](https://github.com/SpazzPy/compiladores_semana_7/blob/main/Frannie%20Fermin%201-16-0408%20Ejecutable.zip) y sin descomprimirlo, pueden ejecutar el .exe
+Se pueden descargar el archivo llamado [Frannie Fermin 1-16-0408 Ejecutable.zip](https://github.com/SpazzPy/compiladores_semana_7/blob/main/Frannie%20Fermin%201-16-0408%20Ejecutable.zip) o presionar el nombre para redirigirse hacie el .zip con el ejecutable. \
+Una vez descargado, sin descomprimirlo pueden ejecutar el .exe
 
 ## Como funciona el lenguaje?
 
