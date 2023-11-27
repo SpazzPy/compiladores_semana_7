@@ -13,7 +13,7 @@ Una vez descargado, sin descomprimirlo pueden ejecutar el .exe
 
 ## Como funciona el lenguaje?
 
-Hay una serie de variables con parametros, las cuales pueden ser obviadas y se les asignaran valores por defectos. 
+Hay una serie de variables con parametros, las cuales pueden ser obviadas y se les asignaranian valores por defectos. 
 
 ### Paper
 **Descripcion**: Se requiere de primero para poder ver las demas figuras \
