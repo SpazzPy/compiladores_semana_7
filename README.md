@@ -29,17 +29,22 @@ Hay una serie de variables con parametros, las cuales pueden ser obviadas y se l
 ### circle (círculo)
 **Descripcion**: Para dibujar un circulo \
 \
-**Parámetros**: ancho, altura, color \
+**Parámetros**: posición x, posición y, radio, color \
 **Ejemplo de uso:** ```circle 290 10 60 green```
 
 ### ellipse (elipse)
 **Descripcion**: Se requiere de primero para poder ver las demas figuras \
 \
-**Parámetros**: ancho, altura, color \
-**Ejemplo de uso:** ```paper 300 300 cyan```
+**Parámetros**: posición x, posición y, radio x, radio y, color \
+**Ejemplo de uso:** ```ellipse 10 290 120 30 red```
 
 ### line (línea)
 **Descripcion**: Se requiere de primero para poder ver las demas figuras \
 \
-**Parámetros**: ancho, altura, color \
-**Ejemplo de uso:** ```paper 300 300 cyan```
+**Parámetros**: posición inicial x, posición inicial y, posición final x, posición final y, grosor, color \
+**Ejemplo de uso:** ```line 150 150 300 300 10 blackn```
+
+### Resultado:
+![image](https://github.com/SpazzPy/compiladores_semana_7/assets/91347861/451365b5-62cf-4545-9fc2-80563fd9b3d4)
+
+
