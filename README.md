@@ -4,10 +4,10 @@ Por: **Frannie Fermin** \
 Matrícula: **1-16-0408**
 
 
-### Introducción
+## Introducción
 Este pequeño compilador es una herramienta que facilita la visualizacion de algunas de las fases de un compilador y generando un código intermedio en SVG a partir de un codigo fuente que fue creado por el mismo desarrollador. 
 
-### Como lo ejecuto?
+## Como lo ejecuto?
 
 ## Como funciona el lenguaje?
 
